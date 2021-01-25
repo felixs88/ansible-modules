@@ -1,1 +1,10 @@
-bkfjlzdbvzldjvzgvjlzd vznkdvkjzdvblk
+---
+- host: test
+  connection: local
+  name: test-ansible-lint
+  gather-facts: false
+
+  tasks:
+    - name: test install pip
+      install: pip
+      state: present
