@@ -7,8 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Ansible Super Linter
-      uses: github/super-linter@v3
-      env:
-        DEFAULT_BRANCH: main
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: ansible/ansible-lint-action@151b9a2
+      with:
+        "./"
+        args: "q"

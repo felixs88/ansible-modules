@@ -6,5 +6,5 @@
 
   tasks:
     - name: test install pip
-      install: pip
-      state: present
+       install: pip
+        state: present
