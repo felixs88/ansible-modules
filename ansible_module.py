@@ -74,6 +74,8 @@ def main():
    # module.params["name"] # test_example
    # processing
 
+   # module.fail_json(msg="validation message")
+
    module.exit_json(msg="successfully fetched the details")
 
 
