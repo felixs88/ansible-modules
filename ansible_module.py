@@ -26,6 +26,12 @@ options:
     description: option desription details
     required: True
     type: str
+
+requirements:
+  - "python 2.7"
+
+author:
+  - Your Name (@git-id)
 """
 
 EXAMPLES = """
@@ -33,9 +39,10 @@ EXAMPLES = """
 
 - name: "collecting the inventory"
   namespace.collection.your_new_module_name:
-    host: 127.0.0.1
+    hostname: 127.0.0.1
     username: localhost
     password: *********
+    name: test_example
 """
 
 RETURN = """
@@ -64,6 +71,7 @@ def main():
         supports_check_mode=False,
     )
 
+   # module.params["name"] # test_example
    # processing
 
    module.exit_json(msg="successfully fetched the details")
